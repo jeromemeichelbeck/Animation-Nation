@@ -1,3 +1,20 @@
+/* Animations */
+
+@keyframes tap-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(30deg);
+    }
+    90% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +26,6 @@ html, body {
     height: 100vh;
     width: 100vw;
     background-color: #333;
-}
-
-#run {
-    display: none;
-}
-
-#run:checked ~ .tap-2 {
-    transform: rotate(30deg);
 }
 
 .table {
@@ -37,6 +46,7 @@ html, body {
     width: 300px;
     border-radius: 10px;
     background-color: #667;
+    z-index: 1;
 }
 
 .tap-1 {
@@ -56,7 +66,7 @@ html, body {
     width: 40px;
     cursor: pointer;
     z-index: 1;
-    transition: transform 0.5s;
+    animation: tap-rotation 10s 2s 1;
 }
 
 .tap-3 {
@@ -69,7 +79,7 @@ html, body {
     transform: rotate(-10deg);
 }
 
-.handle-1 {
+.tap-handle-1 {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -80,7 +90,7 @@ html, body {
     z-index: 1;
 }
 
-.handle-2 {
+.tap-handle-2 {
     position: absolute;
     top: -10px;
     left: 15px;
@@ -90,7 +100,7 @@ html, body {
     z-index: 0;
 }
 
-.handle-3 {
+.tap-handle-3 {
     position: absolute;
     left: 5px;
     top: -70px;
@@ -137,6 +147,39 @@ html, body {
 .foot-right {
     right: 10%;
 }
+
+.beer {
+    position: absolute;
+    top: 430px;
+    left: calc(25% + 350px);
+    height: 200px;
+    width: 120px;
+}
+
+.glass {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 10px solid rgba(100, 200, 255, 0.05);
+    border-top: none;
+    border-radius: 5px 5px 15px 15px;
+    background-color: rgba(100, 200, 255, 0.2);
+    transform: rotate(-20deg);
+}
+
+.beer-handle {
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    height: 100px;
+    width: 40px;
+    border: 15px solid rgba(100, 200, 255, 0.2);
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+}
+
 
 @media screen and (max-width: 768px) {
     .tap {
