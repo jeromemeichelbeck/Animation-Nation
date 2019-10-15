@@ -1,190 +1,281 @@
 /* Animations */
 
 @keyframes tap-rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(30deg);
-    }
-    90% {
-        transform: rotate(30deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(30deg);
+	}
+	90% {
+		transform: rotate(30deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes foam-translation {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(-30px);
+	}
+}
+
+@keyframes beer-translation {
+	0% {
+		transform: translateY(0) rotate(30deg);
+	}
+	100% {
+		transform: translateY(-170px);
+	}
+}
+
+@keyframes glass-rotation {
+	0% {
+		transform: rotate(-30deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes jet-stream {
+	0% {
+		height: 10px;
+		top: 0;
+	}
+	3% {
+		height: 227px;
+		top: 0;
+	}
+	95% {
+		height: 150px;
+		top: 0;
+	}
+	100% {
+		height: 0px;
+		top: 210px;
+	}
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html, body {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background-color: #333;
+html,
+body {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-color: #333;
 }
 
 .table {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 25%;
-    background-color: #111;
-    z-index: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 25%;
+	background-color: #111;
+	z-index: 0;
 }
 
 .tap {
-    position: absolute;
-    bottom: 20%;
-    left: 25%;
-    height: 500px;
-    width: 300px;
-    border-radius: 10px;
-    background-color: #667;
-    z-index: 1;
+	position: absolute;
+	bottom: 20%;
+	left: 25%;
+	height: 500px;
+	width: 300px;
+	border-radius: 10px;
+	background-color: #667;
+	z-index: 1;
 }
 
 .tap-1 {
-    position: absolute;
-    top: 60px;
-    right: -60px;
-    height: 30px;
-    width: 60px;
-    background-color: #AAB;
+	position: absolute;
+	top: 60px;
+	right: -60px;
+	height: 30px;
+	width: 60px;
+	background-color: #aab;
 }
 
 .tap-2 {
-    position: absolute;
-    top: 55px;
-    right: -80px;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    z-index: 1;
-    animation: tap-rotation 10s 2s 1;
+	position: absolute;
+	top: 55px;
+	right: -80px;
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+	z-index: 1;
+	animation: tap-rotation 10s 1s 1;
 }
 
 .tap-3 {
-    position: absolute;
-    top: 90px;
-    right: -75px;
-    width: 15px;
-    border: 2px solid transparent;
-    border-top: 30px solid #AAB;
-    transform: rotate(-10deg);
+	position: absolute;
+	top: 90px;
+	right: -75px;
+	width: 15px;
+	border: 2px solid transparent;
+	border-top: 30px solid #aab;
+	transform: rotate(-10deg);
+}
+
+.jet {
+	position: absolute;
+	top: 0px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: orange;
+	animation: jet-stream 10s 1s 1 forwards;
+	z-index: 0;
 }
 
 .tap-handle-1 {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #99A;
-    border-radius: 50%;
-    z-index: 1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #99a;
+	border-radius: 50%;
+	z-index: 1;
 }
 
 .tap-handle-2 {
-    position: absolute;
-    top: -10px;
-    left: 15px;
-    height: 20px;
-    width: 10px;
-    background-color: #AAB;
-    z-index: 0;
+	position: absolute;
+	top: -10px;
+	left: 15px;
+	height: 20px;
+	width: 10px;
+	background-color: #aab;
+	z-index: 0;
 }
 
 .tap-handle-3 {
-    position: absolute;
-    left: 5px;
-    top: -70px;
-    width: 30px;
-    border: 10px solid transparent;
-    border-top: 60px solid #100;
-    border-radius: 10px;
+	position: absolute;
+	left: 5px;
+	top: -70px;
+	width: 30px;
+	border: 10px solid transparent;
+	border-top: 60px solid #100;
+	border-radius: 10px;
 }
 
 .vent {
-    position: absolute;
-    left: 35%;
-    height: 8px;
-    width: 30%;
-    border-radius: 0 0 8px 8px;
-    background-color: #001;
+	position: absolute;
+	left: 35%;
+	height: 8px;
+	width: 30%;
+	border-radius: 0 0 8px 8px;
+	background-color: #001;
 }
 
 .vent-1 {
-    top: 15%;
+	top: 15%;
 }
 
 .vent-2 {
-    top: 20%;
+	top: 20%;
 }
 
 .vent-3 {
-    top: 25%;
+	top: 25%;
 }
 
 .foot {
-    position: absolute;
-    bottom: -15px;
-    height: 15px;
-    width: 25px;
-    background-color: #000;
-    border-radius: 0 0 10px 10px;
+	position: absolute;
+	bottom: -15px;
+	height: 15px;
+	width: 25px;
+	background-color: #000;
+	border-radius: 0 0 10px 10px;
 }
 
 .foot-left {
-    left: 10%;
+	left: 10%;
 }
 
 .foot-right {
-    right: 10%;
+	right: 10%;
 }
 
 .beer {
-    position: absolute;
-    top: 430px;
-    left: calc(25% + 350px);
-    height: 200px;
-    width: 120px;
+	position: absolute;
+	top: 430px;
+	left: calc(25% + 345px);
+	height: 200px;
+	width: 120px;
+	transform: rotate(-30deg);
+	animation: glass-rotation 10s linear 1s 1 forwards;
 }
 
 .glass {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: 10px solid rgba(100, 200, 255, 0.05);
-    border-top: none;
-    border-radius: 5px 5px 15px 15px;
-    background-color: rgba(100, 200, 255, 0.2);
-    transform: rotate(-20deg);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 10px solid rgba(100, 200, 255, 0.05);
+	border-bottom-width: 15px;
+	border-top: none;
+	border-radius: 5px 5px 15px 15px;
+	background-color: rgba(100, 200, 255, 0.2);
+	overflow: hidden;
 }
 
 .beer-handle {
-    position: absolute;
-    top: 30px;
-    right: -50px;
-    height: 100px;
-    width: 40px;
-    border: 15px solid rgba(100, 200, 255, 0.2);
-    border-left: none;
-    border-radius: 0 20px 20px 0;
+	position: absolute;
+	top: 30px;
+	right: -40px;
+	height: 100px;
+	width: 40px;
+	border: 15px solid rgba(100, 200, 255, 0.2);
+	border-left: none;
+	border-radius: 0 20px 20px 0;
 }
 
+.actual-beer {
+	position: absolute;
+	top: 210px;
+	left: -150px;
+	width: 300px;
+	height: 300px;
+	animation: beer-translation 10s linear 1s 1 forwards;
+}
+
+.liquid {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: orange;
+}
+
+.foam {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	background-color: #fff;
+	animation: foam-translation 13s 2s 1 forwards;
+}
 
 @media screen and (max-width: 768px) {
-    .tap {
-        left: 0;
-        width: 40%;
-        height: 50%;
-    }
+	.tap {
+		left: 0;
+		width: 40%;
+		height: 50%;
+	}
 }
