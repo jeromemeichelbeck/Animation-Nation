@@ -136,7 +136,7 @@ body {
 	height: 10px;
 	border-radius: 5px;
 	background-color: orange;
-	animation: jet-stream 10s 1s 1 forwards;
+	animation: jet-stream 10s 1.2s 1 forwards;
 	z-index: 0;
 }
 
